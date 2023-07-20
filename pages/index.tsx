@@ -36,7 +36,8 @@ export default function Home() {
 export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
 	return {
 		redirect: {
-			destination: '/admin/projects/f0d1fd8d-fcf5-4957-b07d-f062e1f3727d/targets',
+			//destination: '/admin/projects/f0d1fd8d-fcf5-4957-b07d-f062e1f3727d/targets',
+			destination: '/admin/projects/2ed0e580-a27b-49ef-ab85-5dc14f73699e/targets',
 			permanent: false,
 		},
 	};
