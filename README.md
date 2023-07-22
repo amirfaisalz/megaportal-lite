@@ -8,7 +8,8 @@ This is a [Next.js](https://nextjs.org/) project that uses Typescript, and Hasur
 
 1. Clone the repo locally.
 2. Install all necessary packages by running `yarn`
-3. Run `yarn dev` to get your dev environment up and running
+3. Run cp .env.example .env to add .env file in this projects
+4. Run `yarn dev` to get your dev environment up and running
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
@@ -23,6 +24,7 @@ Technical Assignment Task:
 Objective: Fix the bugs related to updating the datatable after adding a new target through a modal and the duplication of data when clicking the sync target button.
 
 Steps to follow:
+
 1. Fork the repository from the original repository.
 2. Clone the forked repository to your local machine.
 3. Set up the development environment if necessary.
@@ -34,18 +36,21 @@ Steps to follow:
 9. Share the link to your forked repository with the hiring team for validation.
 
 Bug 1: DataTable not updating after adding a new target through modal:
+
 - Analyze the code related to adding new targets and updating the DataTable.
 - Identify any missing or incorrect logic that prevents the DataTable from being updated.
 - Make the necessary changes to ensure that the DataTable is updated with the new data after adding a target through the modal.
 - Test the functionality thoroughly to confirm that the DataTable is correctly updated.
 
 Bug 2: Duplication of data when clicking the sync target button:
+
 - Review the code associated with the sync target button functionality.
 - Identify the reason behind the duplication of data when the button is clicked.
 - Modify the code to prevent data duplication while maintaining the desired synchronization functionality.
 - Test the synchronization process to verify that the duplication issue is resolved.
 
 Additional guidelines:
+
 - Ensure that your changes follow the existing coding style and conventions used in the codebase.
 - Document any significant changes or assumptions made during the bug fixing process.
 - Feel free to refactor or optimize the codebase where necessary, but be cautious not to introduce new bugs.
@@ -56,10 +61,9 @@ Please note that the provided video link should be reviewed to gain a better und
 https://youtu.be/sOKjmCSrPI8
 https://youtu.be/1FC2kM2nNXw
 
-
-
-
 ## Authentication
+
 Get your NEXT_PUBLIC_ACCESS_TOKEN by following this [instruction](https://gist.github.com/vousmeevoyez/f125ad4255086b2ecd7dd1ee2ba26352)
+
 1. Copy token value and paste it to NEXT_PUBLIC_ACCESS_TOKEN
 2. If issue persist please reachout to my email.
