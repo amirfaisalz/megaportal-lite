@@ -105,7 +105,12 @@ export const ScansTargetsPage: NextPage<IProps> = ({ apiToken }) => {
 		}));
 
 		if (trimmedTargets) {
-			setTargets((prevTargets) => [...prevTargets, ...trimmedTargets]);
+			// setTargets((prevTargets) => [...prevTargets, ...trimmedTargets]);
+			/*
+				setTargets((prevTargets) => [...prevTargets, ...trimmedTargets]);
+				 this action causes duplication of data in the table, because it setsTargets with data prevTargets + trimmedTargets. What I did was replace it with only the data from trimmedTargets
+			*/
+			setTargets(trimmedTargets);
 		}
 	};
 
@@ -181,7 +186,7 @@ export const ScansTargetsPage: NextPage<IProps> = ({ apiToken }) => {
 	);
 
 	const removeSelectedTargets = async () => {
-    // @TODO not done
+		// @TODO not done
 	};
 
 	const handleCloseModal = (
@@ -247,11 +252,17 @@ export const ScansTargetsPage: NextPage<IProps> = ({ apiToken }) => {
 					/>
 				</Flex>
 			</Flex>
+
+			{/* a */}
 			<AddTargetsModal
 				id='add-targets-modal'
 				isOpen={isAddTargetsModalOpen}
 				onClose={handleCloseModal}
 				isInternal={project?.type === PROJECT_TYPE.INTERNAL_SCAN}
+				mutate={mutate}
+				/*
+				I added mutate props into the AddTargetModal component, which will update the data when it finishes creating data targets
+				 */
 			/>
 		</>
 	);
@@ -260,4 +271,3 @@ export const ScansTargetsPage: NextPage<IProps> = ({ apiToken }) => {
 export default ScansTargetsPage;
 
 (ScansTargetsPage as any).layout = Admin;
-
